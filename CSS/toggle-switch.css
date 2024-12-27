@@ -96,6 +96,7 @@
   .switch-light span span {
     position: relative;
     z-index: 2;
+    margin-top: 2px;
     display: block;
     text-align: center;
     float: left;
@@ -133,21 +134,23 @@
     color: #888b92;
   }
   .switch-ios.switch-light a {
-    left: 0;
+    left: 3px;
     top: 0;
-    width: 2em;
-    height: 2em;
+    width: 1.75em;
+    height: 1.75em;
     background-color: #fff;
     border-radius: 100%;
-    border: 0.25em solid #D8D9DB;
-    /* border: 1px solid #cccccc; */
+    /* border: 0.25em solid #D8D9DB; */
+    border: 2px solid #cccccc;
     transition: all 0.2s ease-out;
+    margin-top: 2.5px;
   }
   .switch-ios.switch-light > span {
     display: block;
     width: 100px;
-    height: 2em;
-    background-color: #D8D9DB;
+    height: 2.5em;
+    background-color: #cccccc;
+    border: solid 2px #ccc;
     border-radius: 1.75em;
     transition: all 0.4s ease-out;
   }
@@ -170,11 +173,11 @@
   }
   .switch-ios.switch-light input:checked ~ span a {
     left: 100%;
-    border-color: #7477bf;
+    border-color: #cccccc;
     margin-left: -2em;
   }
   .switch-ios.switch-light input:checked ~ span {
-    border-color: #7477bf;
+    /* border-color: #7477bf; */
     box-shadow: inset 0 0 0 30px #7477bf;
   }
   .switch-ios.switch-light input:checked ~ span span:first-of-type {
@@ -185,13 +188,13 @@
     color: #fff;
   }
   .switch-ios.switch-toggle {
-    background-color: #D8D9DB;
+    background-color: #ccc;
     border-radius: 30px;
     box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0;
   }
   .switch-ios.switch-toggle a {
     background-color: #7477bf;
-    border: 0.125em solid #D8D9DB;
+    border: 0.125em solid #ccc;
     border-radius: 1.75em;
     transition: all 0.12s ease-out;
   }

@@ -180,7 +180,7 @@ main {
   width: 100%;
 }
 
-section, .headline {
+section, .headline, .alert {
   padding: 0 15px;
 }
 
@@ -188,6 +188,35 @@ section, .tab {
   border-bottom: var(--border);
 }
 
+/* Alert Banner */
+
+.alert {
+  margin: 15px 0;
+}
+
+.alert-banner {
+  background-color: var(--purple);
+  padding: 15px;
+  color: var(--white);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.alert-banner p {
+  margin: 0;
+}
+
+
+/* Chart Widgets */
+
+.widget-container-full, 
+.widget-container-half {
+  width: 95vw;
+  position: relative;
+  }
 
 /* Traffic Widget */
 
@@ -338,38 +367,6 @@ button {
 
 /* Toggle */
 
-/* .toggle input {
-  cursor: pointer;
-  position: relative;
-  width: 75px;
-  height: 30px;
-  border-radius: 25px;
-  outline: none;
-  background-color: #ccc;
-  -webkit-appearance: none;
-  transition: background-color .3s rgba(0,0,0,0.15);
-}
-.toggle input::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  height: 1.25rem;
-  width: 1.25rem;
-  background-color: white;
-  transition: left .3s;
-}
-
-.toggle input:checked {
-  background-color: var(--purple);
-}
-
-.toggle input:checked::after {
-  left: 80%;
-} */
-
 .toggle-container {
   display: flex;
   align-items: center;
@@ -429,6 +426,14 @@ button {
     grid-column: 2 / span 1;
   }
 
+  .widget-container-full {
+    width: 90vw;
+    }
+
+  .widget-container-half {
+    width: 45vw;
+    }
+
   .social-container-wrapper {
     display: flex;
     justify-content: space-between;
@@ -438,7 +443,6 @@ button {
   .social-container {
     flex-grow: 1;
   }
-
 
   .member-container {
     display: flex;
