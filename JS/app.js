@@ -22,11 +22,11 @@ alertBanner.addEventListener('click', e => {
 
 // Chart Widgets
 
-// Line Graph
+// Traffic Line Graph
 
 const trafficCanvas = document.getElementById("traffic-chart");
 
-let trafficData = {
+const trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
     datasets: [{
         data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1900, 2250, 1500, 2500],
@@ -36,7 +36,7 @@ let trafficData = {
     }],
 };
 
-let trafficOptions = {
+const trafficOptions = {
     backgroundColor: '#7477bf99',
     fill: true,
     aspectRatio: 2.5,
@@ -52,10 +52,11 @@ let trafficOptions = {
         legend: {
             display: false
         }
-    }
+    },
+
 };
 
-let trafficChart = new Chart(trafficCanvas, {
+const trafficChart = new Chart(trafficCanvas, {
     type: 'line',
     data: trafficData,
     options: trafficOptions
@@ -96,7 +97,7 @@ let dailyChart = new Chart(dailyCanvas, {
 });
 
 
-// Mobile Pie Chart
+// Mobile Doughnut Chart
 
 const mobileCanvas = document.getElementById("mobile-chart");
 
@@ -119,9 +120,17 @@ let mobileOptions = {
         legend: {
             position: 'right',
             labels: {
-                boxWidth: 20,
-                fontStyle: 'bold'
+                boxWidth: 30,
+                font: {
+                    size: 14,
+                    weight: 'bold'
+                }
             }
+        }
+    },
+    elements: {
+        arc: {
+            borderWidth: 0
         }
     }
 };
@@ -134,9 +143,29 @@ let mobileChart = new Chart(mobileCanvas, {
 
 
 
+// Message User
 
 
+const user = document.getElementById('userField');
 
+const message = document.getElementById('messageField');
+
+const send = document.getElementById('send');
+
+
+send.addEventListener( 'click', () => {
+
+    if (user.value === "" && message.value === "") {
+        alert("Please select a user and type a message before sending.");
+    } else if (user.value === "") {
+        alert('Please select a user before sending.');
+    } else if (message.value === "") {
+        alert('Please type a message before sending.');
+    } else {
+        alert(`Message sent successfully to ${user.value}`);
+    }
+
+} );
 
 
 
